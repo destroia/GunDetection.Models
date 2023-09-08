@@ -1,0 +1,50 @@
+<br />
+<h2 style="margin:10px;"> <img src="../../../assets/Img/Localizacion.svg"/><strong>&nbsp;Locations</strong></h2>
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div align="right">
+        <button class="btn btnCreate" (click)="CreateLocation()">Create Location</button>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div class="table-responsive ">
+    <table class="table  table-striped">
+      <thead>
+        <tr class="table-striped ">
+
+          <th scope="col">Name Location </th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let li of listLoca" class="table-striped ">
+
+
+          <td>{{li.name}}</td>
+
+
+          <td align="right">
+            <div class="btn-group" role="group">
+
+
+              <button (click)="Delete(li)" class="btn " style="background:#F41725; color:#FFFFFF">Delete</button>
+              <button (click)="Update(li)" class="btn " style="background:#000000 ; color:#FFFFFF ">Update</button>
+              <button (click)="Show(li)" class="btn btn-success" style=" color:#FFFFFF ">Show</button>
+
+            </div>
+
+
+          </td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>

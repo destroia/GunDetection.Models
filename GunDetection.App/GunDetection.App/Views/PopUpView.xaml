@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<popup:PopupPage  xmlns:popup="http://rotorgames.com" xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GunDetection.App.Views.PopUpView">
+    <Frame  Margin="20" WidthRequest="300" HeightRequest="200" BackgroundColor="#FFFFFF" CornerRadius="20" 
+            VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+        <StackLayout >
+            <Label x:Name="textInfo" TextColor="#63B8B8"
+                VerticalOptions="CenterAndExpand" FontSize="Large"
+                HorizontalOptions="CenterAndExpand"  HorizontalTextAlignment="Center"/>
+
+            <Button  Clicked="Button_Clicked" BackgroundColor="#63B8B8" TextColor="#FFFFFF" CornerRadius="30"
+                    VerticalOptions="End" HorizontalOptions="Center" Text="OK" WidthRequest="100"></Button>
+        </StackLayout>
+    </Frame>
+
+</popup:PopupPage>

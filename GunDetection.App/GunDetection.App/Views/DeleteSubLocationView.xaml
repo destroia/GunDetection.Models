@@ -1,0 +1,15 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GunDetection.App.Views.DeleteSubLocationView"
+             Title="Delete Sub Location">
+    <ContentPage.Content>
+        <StackLayout>
+            <Label x:Name="txtSublocation"  FontSize="Medium"
+                VerticalOptions="CenterAndExpand" 
+                HorizontalOptions="CenterAndExpand" TextColor="Black" />
+            <Button Text="Delete" BackgroundColor="Red" TextColor="White" Clicked="Button_ClickedDelete"></Button>
+            <Button Text="Go Back" BackgroundColor="Black" TextColor="White" Clicked="Button_ClickedGoBack"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

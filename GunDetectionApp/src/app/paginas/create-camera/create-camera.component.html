@@ -1,0 +1,63 @@
+<br />
+<h2 style="margin:10px;"> <img src="../../../assets/Img/cam.svg" /><strong>&nbsp;Create Camera</strong></h2>
+<br />
+
+<form [formGroup]="formularioCreateCamera" style="margin:50px;">
+  <div class="row">
+
+    <div class="col-12 col-sm-4 ">
+      <div class="form-group">
+        <label>Camera name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Enter Camera Name">
+        <p *ngIf="formularioCreateCamera.controls['name'].invalid && formularioCreateCamera.controls['name'].dirty" class="text-danger"> The Camera Name  field is mandatory</p>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4 ">
+      <div class="form-group">
+        <label> Camera Location </label>
+        <select class="form-control custom-select" formControlName="location" (change)="ChangeLocation()" placeholder=" Enter Camera Location">
+          <option class='option'
+                  *ngFor='let option of listLoca'
+                  [value]="option.id">
+            {{option.name}}
+          </option>
+        </select>
+        <p *ngIf="formularioCreateCamera.controls['location'].invalid && formularioCreateCamera.controls['location'].dirty" class="text-danger"> The Camera Location  field is mandatory</p>
+        <button class="btn btn-link" (click)="NewLocation()">New Location</button>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4 ">
+      <div class="form-group">
+        <label>Camera Sub Location </label>
+        <select class="form-control custom-select" formControlName="sublocation" placeholder=" Enter Camera Sub Location">
+          <option class='option'
+                  *ngFor='let option of listSubLoca'
+                  [value]="option.id">
+            {{option.name}}
+          </option>
+        </select>
+        <p *ngIf="formularioCreateCamera.controls['sublocation'].invalid && formularioCreateCamera.controls['sublocation'].dirty" class="text-danger"> The Camera Sub Location  field is mandatory</p>
+        <button *ngIf="this.formularioCreateCamera.controls['location'].valid" class="btn btn-link" (click)="NewSubLocation()">New Sub Location</button>
+      </div>
+    </div>
+    <br />
+    <div *ngIf="saveShow" class="col-12  " align="center" style="margin:50px">
+      <button class="btn btn-primary btn-large btn-block" style="width:50%; " [disabled]="formularioCreateCamera.invalid " (click)="Save()">Save</button>
+    </div>
+    <div>
+
+
+
+    </div>
+  </div>
+</form>
+<div class="row">
+  <div *ngIf="!saveShow" style="position:relative; bottom:100px;" class="col-12 " align="center">
+    <div>
+      <div class="loader"></div>
+    </div>
+
+  </div>
+</div>

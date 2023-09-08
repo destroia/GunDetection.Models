@@ -1,0 +1,97 @@
+<body>
+  <div>
+     <button class="btn btnBack btn-large btn-block" (click)="Back()"><img  src="../../../assets/Img/west_black_24dp.svg" style="position:relative; bottom:2px;"/> Go Back</button>
+
+  </div>
+ 
+  <br />
+  <div style=" color:white; text-align:center">
+    <img src="https://storageaccountfuncu860c.blob.core.windows.net/redcode/logoCodeRed.png" />
+  </div>
+  <div>
+    <div>
+
+      <!--<div align="center" class="app-title">
+        <h1>Sign In</h1>
+      </div>-->
+      <br />
+
+      <form [formGroup]="formularioSignIn">
+        <div class="login-form">
+
+          <div align="center" class="control-group">
+
+            <!--<a  class="login-link" style="color:black;  position: relative; width:100px;left:180px; top: 340px; font-size:15px"><strong (click)="LostPassword()" style="cursor: pointer;">Forgot?</strong></a>-->
+            <input type="text" class="form-control" value="" formControlName="name" style="width:450px" autocomplete="off" placeholder="Name" id="login-name">
+            <label class="login-field-icon fui-user" for="login-name"></label>
+            <p *ngIf="formularioSignIn.controls['name'].invalid && formularioSignIn.controls['name'].dirty" class="text-danger"
+               style="bottom: 20px; right: 120px; position: relative; "> The name field is mandatory</p>
+          </div>
+
+          <div align="center" class="control-group">
+            <input type="text" class="form-control" value="" formControlName="lastName" style="width:450px" autocomplete="off" placeholder="Last Name" id="login-name">
+            <label class="login-field-icon fui-user" for="login-name"></label>
+            <p *ngIf="formularioSignIn.controls['lastName'].invalid && formularioSignIn.controls['lastName'].dirty" class="text-danger"
+               style="bottom: 20px; right: 110px; position: relative; "> The  last name field is mandatory</p>
+          </div>
+
+          <div align="center" class="control-group">
+            <input type="email" class="form-control" value="" formControlName="email" style="width:450px" autocomplete="off" placeholder="E-mail" id="login-name">
+            <label class="login-field-icon fui-user" for="login-name"></label>
+            <p *ngIf="formularioSignIn.controls['email'].invalid && formularioSignIn.controls['email'].dirty" class="text-danger"
+               style="bottom: 20px; right: 120px; position: relative; "> The e-mail field is mandatory</p>
+          </div>
+
+          <div align="center" class="control-group">
+            <input type="text" class="form-control" min="10" value="" formControlName="phone" style="width:450px" autocomplete="off" placeholder="Phone" id="login-pass">
+            <label class="login-field-icon fui-lock" for="login-pass"></label>
+            <p *ngIf="formularioSignIn.controls['phone'].invalid && formularioSignIn.controls['phone'].dirty" class="text-danger"
+               style="bottom: 20px; right: 30px; position: relative; "> The phone field is mandatory. Minimum ten characters</p>
+          </div>
+
+          <div align="center" class="control-group">
+            <input type="password" class="form-control" value="" formControlName="password" style="width:450px" autocomplete="off" placeholder="Password" id="login-name">
+            <label class="login-field-icon fui-user" for="login-name"></label>
+            <p *ngIf="formularioSignIn.controls['password'].invalid && formularioSignIn.controls['password'].dirty" class="text-danger"
+               style="bottom: 20px; right: 105px; position: relative; "> The password field is mandatory</p>
+          </div>
+
+          <div align="center" class="control-group">
+            <input type="password" class="form-control" value="" formControlName="confirmPassword" style="width:450px" autocomplete="off" placeholder="Confirm Password" id="login-name">
+            <label class="login-field-icon fui-user" for="login-name"></label>
+            <p *ngIf="formularioSignIn.controls['confirmPassword'].invalid && formularioSignIn.controls['confirmPassword'].dirty" class="text-danger"
+               style="bottom: 20px; right: 105px; position: relative; "> The password field is mandatory</p><br />
+            <mat-error *ngIf="formularioSignIn.hasError('passwordsNotEqual')" style="position:relative; bottom:25px;">Passwords are different. They should be equal!</mat-error>
+          </div>
+          <br />
+
+
+
+         
+          <div align="center">
+            <button *ngIf="showBtnSignIn" style="width:200px; border-radius:25px" class="btn btn-dark btn-large btn-block" [disabled]="!formularioSignIn.valid" (click)="SignIn()">Signup</button>
+
+
+            <a (click)="Back()"  style="position: relative; cursor:pointer; bottom:95px; left:100px;">Already have an account&nbsp;<strong>Login here</strong></a>
+
+
+
+            <p *ngIf="showMsgEmailExis" class="text-danger">
+              There is already an account with this email
+            </p>
+            <p *ngIf="showSendMail">
+              a letter was sent to your mail
+            </p>
+          </div>
+
+          <br />
+
+          <br />
+
+
+
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

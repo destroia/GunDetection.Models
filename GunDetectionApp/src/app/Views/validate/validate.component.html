@@ -1,0 +1,40 @@
+<body>
+  <br />
+  <br />
+  <br />
+  <div style=" color:white; text-align:center">
+    <img src="https://storageaccountfuncu860c.blob.core.windows.net/redcode/logoCodeRed.png" />
+  </div>
+  <div *ngIf="Validacion" class="login">
+    <div class="login-screen">
+
+      <div class="app-title">
+        <h1>The validation was executed successfully</h1>
+        <br />
+        <button class="btn btn-primary btn-large btn-block" (click)="SignIn()">Sign in</button>
+
+      </div>
+
+
+
+    </div>
+  </div>
+
+  <div *ngIf="Error" class="login">
+    <div class="login-screen">
+
+      <div class="app-title">
+        <h1>
+          Something unexpected happened
+        </h1>
+        <br />
+
+      </div>
+
+
+
+    </div>
+  </div>
+</body>
+
+

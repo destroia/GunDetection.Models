@@ -1,0 +1,54 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GunDetection.App.Views.AlertDetails" Title="Alert Details">
+    <ContentPage.Content>
+        <StackLayout Margin="0,20,0,25"  >
+
+
+            <Grid Margin="30,0,30,0" HeightRequest="18"  Padding="0">
+                <Grid.RowDefinitions>
+                    <RowDefinition></RowDefinition>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="30" />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+                <Image Source="Gun.png" Aspect="AspectFit" ></Image>
+                <Label   FontSize="Subtitle" TextColor="Black" Grid.Column="1">Gun Detection</Label>
+
+            </Grid>
+
+            <Grid Margin="0,0,0,0" TranslationY="-5" Padding="0" HeightRequest="10" >
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="20" ></RowDefinition>
+
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="150" />
+                    <ColumnDefinition  />
+                </Grid.ColumnDefinitions>
+
+                <Label Margin="30,0"  TextColor="Black" HorizontalTextAlignment="End" >Camera bed</Label>
+                <Label Margin="30,0"  TextColor="Black" HorizontalTextAlignment="End" Grid.Column="1" x:Name="date"></Label>
+            </Grid>
+
+            <StackLayout HeightRequest="200" WidthRequest="160"  >
+                <Frame Margin="20,5,20,10"  CornerRadius="20" HeightRequest="200" WidthRequest="160"
+                                    Padding="0" >
+
+                    <Image x:Name="img"  Margin="0"  WidthRequest="160" Aspect="Fill" HeightRequest="200"></Image>
+
+                </Frame>
+
+            </StackLayout>
+
+            <StackLayout Margin=" 20">
+                <Button Clicked="Button_ClickedTrue"  BackgroundColor="Black" TextColor="White" CornerRadius="10" Text="True" BorderColor="White" BorderWidth="2" ></Button>
+                <Button Clicked="Button_ClickedFalse" BackgroundColor="White" TextColor="Black" CornerRadius="10" Text="False" BorderColor="Black" BorderWidth="2" ></Button>
+                
+            </StackLayout>
+        </StackLayout >
+        
+    </ContentPage.Content>
+</ContentPage>

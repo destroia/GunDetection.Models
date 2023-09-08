@@ -1,0 +1,48 @@
+<body>
+  <br />
+  <br />
+  <br />
+  <div style=" color:white; text-align:center">
+    <img src="https://storageaccountfuncu860c.blob.core.windows.net/redcode/logoCodeRed.png" />
+  </div>
+  <div class="login">
+    <div class="login-screen">
+
+      <div class="app-title">
+        <h1 align="center">Create Password</h1>
+      </div>
+      <form [formGroup]="formularioCreatePassword">
+        <div class="login-form">
+          <div align="center" class="control-group">
+            <input type="password" class="form-control" value="" formControlName="password" style="width:450px" autocomplete="off" placeholder="Password" id="login-name">
+            <label class="login-field-icon fui-user" for="login-name"></label>
+            <p *ngIf="formularioCreatePassword.controls['password'].invalid && formularioCreatePassword.controls['password'].dirty" class="text-danger"
+               style="bottom: 20px; right: 120px; position: relative; "> The e-mail field is mandatory</p>
+          </div>
+
+          <div align="center" class="control-group">
+            <input type="password" class="form-control" value="" formControlName="confirmPassword" style="width:450px" autocomplete="off" placeholder="Confirm Password" id="login-pass">
+            <label class="login-field-icon fui-lock" for="login-pass"></label>
+            <p *ngIf="formularioCreatePassword.controls['confirmPassword'].invalid && formularioCreatePassword.controls['confirmPassword'].dirty" class="text-danger"
+               style="bottom: 20px; right: 110px; position: relative; "> The password field is mandatory</p>
+
+            <mat-error *ngIf="formularioCreatePassword.hasError('passwordsNotEqual')">Passwords are different. They should be equal!</mat-error>
+          </div>
+
+
+          <br />
+          <div class="row">
+
+
+            <div class="col-12 col-sm-12">
+              <a class="btn btn-dark btn-large btn-block" style="border-radius:25px;" (click)="CreatePassword()">Create Password</a>
+            </div>
+          </div>
+
+          <br />
+
+        </div>
+      </form>
+    </div>
+  </div>
+</body>

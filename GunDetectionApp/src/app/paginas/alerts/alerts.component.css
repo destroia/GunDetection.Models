@@ -1,0 +1,45 @@
+.alertImg {
+  width:
+      auto;
+  height: auto;
+  position: relative;
+  bottom: 20px;
+  max-height: 300px;
+  max-width: 100%;
+}
+.tamImg{
+    min-height:250px;
+}
+.AlertTipoBtn {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  height: 50px;
+}
+
+.card-customer {
+  margin: 10px;
+}
+
+.FromTo {
+  width: 60px;
+}
+.AlarmItems {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 21px;
+  height: 50px;
+}
+.AlarmItemss {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 14px;
+  /* identical to box height */
+  color: #000000;
+}

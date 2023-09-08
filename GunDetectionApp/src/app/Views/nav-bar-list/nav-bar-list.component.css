@@ -1,0 +1,12 @@
+button {
+  border: 1px solid red
+}
+
+.bottomStick { /*border-top:1px solid green;border-bottom:1px solid green;*/
+  position: absolute;
+  bottom: 0
+}
+
+.bottomRelative {
+  position: relative;
+}

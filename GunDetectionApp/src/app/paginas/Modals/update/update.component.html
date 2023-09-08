@@ -1,0 +1,38 @@
+<br />
+<h2 style="margin:10px;">  <mat-icon>update</mat-icon><strong>&nbsp;{{data.tit}}</strong></h2>
+<br />
+
+<form [formGroup]="formularioUpdate" style="margin:50px;">
+  <div class="row">
+
+    <div class="col-12 col-sm-6 ">
+      <div class="form-group">
+        <label>{{data.name}}</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="{{data.plase}}">
+        <p *ngIf="formularioUpdate.controls['name'].invalid && formularioUpdate.controls['name'].dirty" class="text-danger"> The {{data.plase}} field is mandatory</p>
+      </div>
+    </div>
+
+    <div *ngIf="activateSave" class="col-12  col-sm-4" align="center">
+      <button class="btn btn-primary btn-large btn-block" style="width:70%; position:relative; top:25px" [disabled]="formularioUpdate.invalid " (click)="Update()">Update</button>
+    </div>
+    <div class="col-12 col-sm-6" *ngIf="!activateSave" align="center">
+      <div style="position:absolute;">
+        <div class="loader"></div>
+      </div>
+
+    </div>
+  </div>
+</form>
+
+<footer>
+
+  <div *ngIf="activateSave" align="right"  style="margin-right:10% ">
+    <div class="btn-group" aria-label="Basic example">
+
+      <button class="btn btnBack " style="background:#000000; color: #ffffff;" (click)="OnClick()"> Back</button>
+      
+    </div>
+  </div>
+
+</footer>

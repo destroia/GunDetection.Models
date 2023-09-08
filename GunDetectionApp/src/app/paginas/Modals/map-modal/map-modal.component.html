@@ -1,0 +1,19 @@
+
+<agm-map [latitude]="lat" [longitude]="log" [zoom]="zoom" >
+         <agm-circle [latitude]="lat "
+                     [longitude]="log"
+                     [radius]="10" [fillColor]="'red'" [circleDraggable]="false"
+                     [editable]="false">
+         </agm-circle>
+</agm-map>
+
+
+<footer>
+  <div class="row lign-items-end" style="margin-left: 90%; margin-top:20px; position:relative;  ">
+    <div class="col-12"></div>
+    <div class="align-self-end">
+      <button class="btn btn-primary" (click)="OnClick()">Back</button>
+    </div>
+   
+  </div>
+</footer>

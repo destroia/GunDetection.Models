@@ -1,0 +1,93 @@
+
+<body>
+  <br />
+  <br />
+  <br />
+  <div style="color:white; text-align:center">
+    <img src="https://storageaccountfuncu860c.blob.core.windows.net/redcode/logoCodeRed.png" />
+  </div>
+  <br />
+  
+  <form [formGroup]="formularioLogin">
+    <div>
+      <div align="center" class="control-group">
+        <!--<a class="login-link" style="color:black; position: relative; top:95px; left:180px;  cursor:pointer; font-size:15px" (click)="LostPassword()"><strong>Forgot?</strong></a>-->
+        <input type="email" class="form-control" value="" formControlName="mail" style="width:450px" autocomplete="off" placeholder="E-Mail" id="login-name">
+        <label class="login-field-icon fui-user" for="login-name"></label>
+        <p *ngIf="formularioLogin.controls['mail'].invalid && formularioLogin.controls['mail'].dirty" class="text-danger"
+           style="bottom:20px; right:120px; position:relative; "> The e-mail field is mandatory</p>
+      </div>
+
+     
+      <div align="center" class="control-group">
+
+
+        <a class="login-link" style="color:black; position: relative; top:35px; left:180px;  cursor:pointer; font-size:15px" (click)="LostPassword()"><strong>Forgot?</strong></a>
+        <input type="{{textPassword}}" class="form-control" value="" formControlName="password" style="width:450px" autocomplete="off" placeholder="Password" id="login-pass">
+        <label class="login-field-icon fui-lock" for="login-pass"></label>
+        <p *ngIf="formularioLogin.controls['password'].invalid && formularioLogin.controls['password'].dirty" class="text-danger"
+           style="bottom: 20px; right: 110px; position: relative; "> The password field is mandatory</p>
+        <p *ngIf="showLoginFail" class="text-danger"
+           style="position: relative; "> Invalid credentials</p>
+
+      </div>
+
+      <!--<div >
+
+    <input type="checkbox" id="pass" (change)="ShowPassword()" formControlName="checkPassword">
+
+    <label for="pass" > Show Password</label>
+
+  </div>-->
+
+      <br *ngIf="showLoginFail" />
+
+      <div align="center">
+
+        <div style="position:relative; right:150px;">
+          <input style="border-radius:100%" type="checkbox" id="rem" formControlName="check">
+
+          <label for="rem"> &nbsp; Stay logged in</label>
+        </div>
+        <div style="position:relative; left:120px; width:300px;  bottom:35px;">
+          <a class="login-link" style="color:black;  cursor:pointer;" (click)="SignIn()">Dont have an account? <strong>Singup</strong></a>
+        </div>
+
+      </div>
+      <div align="left" style="position:relative; background:black;  width:300px; bottom:30px;">
+
+      </div>
+      <div class="row">
+
+
+
+      </div>
+      <div>
+        <div align="center">
+          <br />
+
+
+          <button class="btn btn-dark btn-large btn-block" style="width:200px; border-radius:25px" [disabled]="!formularioLogin.valid" (click)="Login()">login</button>
+
+          <br />
+          <br />
+
+
+        </div>
+
+
+      </div>
+
+
+
+
+
+      <div *ngIf="loader" align="center">
+        <div style="position:absolute;margin-left:46.9%; top:300px;">
+          <div class="loader"></div>
+        </div>
+
+      </div>
+    </div>
+  </form>
+</body>

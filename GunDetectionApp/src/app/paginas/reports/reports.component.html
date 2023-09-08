@@ -1,0 +1,188 @@
+<br />
+<h2 style="margin:10px;"><mat-icon>history_edu</mat-icon> <strong>&nbsp;Reports</strong></h2>
+<br />
+<div class="" style="margin-left:10%; margin-right:5%;">
+  <div class="row" style="position:relative; top:-40px;">
+    <!--From-->
+    <div class="col-6 col-lg-6 col-xl-2">
+
+      <div class="form-group">
+        <span> <img src="../../../assets/Img/calendar.svg" style="position:absolute; top:8px; left:11px; " /></span>
+
+        <label style="position:absolute; left:50px; bottom:70px">From</label>
+        <input type="date" class="form-control" style="width:85%; left:30px;  position:relative" [(ngModel)]="from" (change)="ChangedFilter()">
+
+
+
+      </div>
+
+
+    </div>
+
+    <!--To-->
+    <div class="col-6 col-lg-6 col-xl-2">
+      <div class="form-group">
+        <span> <img src="../../../assets/Img/Line 1.svg" style=" border: 1px solid #000000; position:relative; right:20px; top:10px; " /></span>
+        <label style="position:absolute; bottom:70px;">To</label>
+        <input type="date" class="form-control" style="width:85%; bottom:20px; position:relative" [(ngModel)]="to" (change)="ChangedFilter()">
+
+
+      </div>
+
+
+    </div>
+
+    <!--Boxes-->
+    <div class="col-6 col-xl-2">
+      <span> <img src="../../../assets/Img/cam.svg" style="position:absolute; top:10px; left:10px; " /></span>
+
+      <!--[(ngModel)]="categoria.orden"-->
+      <select class="form-control custom-select" (change)="ChangedFilter()" style="width:80%; left:30px; position:relative">
+        <option selected>All Cameras</option>
+        <option class='option'
+                *ngFor='let option of listCam'
+                [value]="option.id">
+          {{option.name}}
+        </option>
+      </select>
+    </div>
+
+    <!--Locacion-->
+    <div class="col-6 col-xl-2">
+      <span> <img src="../../../assets/Img/Localizacion.svg" style="position:absolute; top:8px; left:14px; " /></span>
+
+      <!--[(ngModel)]="categoria.orden"-->
+      <select class="form-control custom-select" (change)="ChangedFilter()" style="width:80%; left:30px; position:relative">
+        <option selected>All Location</option>
+        <option class='option'
+                *ngFor='let option of listLoca'
+                [value]="option.id">
+          {{option.name}}
+      </select>
+    </div>
+
+
+
+    <!--Status-->
+    <div class="col-6 col-xl-2">
+      <span> <img src="../../../assets/Img/warning 1.svg" style="position:absolute; top:8px; left:11px; " /></span>
+
+      <!--[(ngModel)]="categoria.orden"-->
+      <select class="form-control custom-select" (change)="ChangedFilter()" style="width:80%; left:30px; position:relative" [(ngModel)]="Status">
+        <option selected>Status</option>
+        <option value="true">Thread</option>
+        <option value="true">Verified</option>
+        <option value="">Action required</option>
+      </select>
+    </div>
+
+    <!--Alert Type-->
+    <div class="col-6 col-xl-2">
+      <span> <img src="../../../assets/Img/warning 1.svg" style="position:absolute; top:8px; left:11px; " /></span>
+
+      <!--[(ngModel)]="categoria.orden"-->
+      <select class="form-control custom-select" (change)="ChangedFilter()" style="width:80%; left:30px; position:relative" [(ngModel)]="typeAlert">
+        <!--<option selected>Alert Type</option>
+        <option value="Gun detection">Gun detection</option>
+        <option value="Person detection">Person detection</option>
+        <option value="Hands up">Hands up</option>
+        <option value="Fight">Fight</option>-->
+
+
+        <option value="" selected>Alert Type</option>
+        <option value="gun">Gun detection</option>
+        <option value="person">Person detection</option>
+        <option value="3">Hands up</option>
+        <option value="4">Fight</option>
+      </select>
+
+
+    </div>
+
+  </div>
+</div>
+
+<div align="right" style="position:relative; top:-20px; right:10%">
+  <label>
+    <button (click)="Pri()" style="background:transparent ; border:none">
+      <img height="35" src="../../../assets/Img/first_page_black_24dp.svg" />
+    </button>
+    <button (click)="Ant()" style="background:transparent ; border:none">
+      <img src="../../../assets/Img/arrow_back_ios_black_24dp.svg" />
+    </button>
+
+    Pag {{filtro.pag }} of  {{TotalPaginas}}
+
+    <button (click)="Sig()" style="background: transparent; border: none">
+      <img src="../../../assets/Img/arrow_forward_ios_black_24dp.svg" />
+    </button>
+    <button (click)="Ult()" style="background: transparent; border: none">
+      <img height="35" src="../../../assets/Img/last_page_black_24dp.svg" />
+    </button>
+  </label>
+</div>
+
+<div style="margin-left:8%; margin-right:8%">
+  <div class="table-responsive ">
+    <table class="table  table-striped">
+      <thead>
+        <tr class="table-striped ">
+          <th scope="col"> Image</th>
+          <th scope="col">Status</th>
+          <th scope="col">Date</th>
+          <th scope="col">Attended By</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let li of listAlert" class="table-striped ">
+          <td>
+            <img src="{{li.full_photo
+    }}" height="100px" />
+          </td>
+          <td>{{li.status}}</td>
+          <td>{{li.date | date:'medium' }}</td>
+          <td>{{li.nameUser }}</td>
+
+
+
+          <td align="right">
+            <div class="btn-group" role="group">
+
+
+
+              <button (click)="Show(li)" class="btn " style="background:#000000 ; color:#FFFFFF;">Show</button>
+
+            </div>
+
+
+          </td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+
+
+<div align="right" style="position:relative; top:-20px; right:10%">
+  <label>
+    <button (click)="Pri()" style="background:transparent ; border:none">
+      <img height="35" src="../../../assets/Img/first_page_black_24dp.svg" />
+    </button>
+    <button (click)="Ant()" style="background:transparent ; border:none">
+      <img src="../../../assets/Img/arrow_back_ios_black_24dp.svg" />
+    </button>
+
+    Pag {{filtro.pag }} of  {{TotalPaginas}}
+
+    <button (click)="Sig()" style="background: transparent; border: none">
+      <img src="../../../assets/Img/arrow_forward_ios_black_24dp.svg" />
+    </button>
+    <button (click)="Ult()" style="background: transparent; border: none">
+      <img height="35" src="../../../assets/Img/last_page_black_24dp.svg" />
+    </button>
+  </label>
+</div>
+

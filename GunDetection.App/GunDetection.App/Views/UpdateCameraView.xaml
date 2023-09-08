@@ -1,0 +1,21 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GunDetection.App.Views.UpdateCameraView" Title="Update Camera">
+    <ContentPage.Content>
+        <StackLayout Margin="20,-110,20,20"  VerticalOptions="CenterAndExpand">
+            <Label Text="Camera" TextColor="#000000" FontAttributes="Bold" />
+            <Entry x:Name="txtCamera" TextColor="Black" PlaceholderColor="Gray"  Placeholder="Name of location"  ></Entry>
+
+            <Label Text="Location" TextColor="#000000"  FontAttributes="Bold" />
+            <Picker x:Name="location" TextTransform="Uppercase" InputTransparent="False"  Title="Location" TextColor="Black" SelectedIndexChanged="location_SelectedIndexChanged"  />
+            <Button WidthRequest="100" Scale=".5" BackgroundColor="Transparent" BorderColor="Black"  BorderWidth="2" TextColor="Black" Text="New Location" Clicked="Button_ClickedCreateLocation"></Button>
+
+            <Label Text="Sub Location" TextColor="#000000" FontAttributes="Bold" />
+            <Picker x:Name="subLocation" Title="Sub Location" TextColor="Black" SelectedIndexChanged="subLocation_SelectedIndexChanged" />
+            <Button x:Name="newSub" WidthRequest="100"  BorderColor="Black"  BorderWidth="2"  Scale=".5" BackgroundColor="Transparent" TextColor="Black" Text="New Sub Location" Clicked="Button_ClickedCreateSubLocation"></Button>
+
+            <Button x:Name="btn" Background="Black"  Text="Save" TextColor="White" Clicked="btn_ClickedSave"></Button>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,107 @@
+<mat-nav-list>
+  <a mat-list-item >
+    <mat-icon>
+      info
+    </mat-icon>Alerts
+  </a>
+  <a mat-list-item (click)="SecurityWall()">
+    <mat-icon>
+      info
+    </mat-icon>Security Wall
+  </a>
+  <a mat-list-item (click)="Alert()">
+    <mat-icon>
+      info
+    </mat-icon>Reports
+  </a>
+
+
+  <!--Settings-->
+  <mat-expansion-panel style="position:relative; right:10px; ">
+    <mat-expansion-panel-header>
+      <mat-panel-title style="align-items:safe center"><mat-icon>info</mat-icon>Settings</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>cameras
+      </a>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>Boxes
+      </a>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>Users
+      </a>
+      <a mat-list-item (click)="Locations()">
+        <mat-icon>
+          info
+        </mat-icon>Locations
+      </a>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>Accounts
+      </a>
+    </mat-nav-list>
+  </mat-expansion-panel>
+
+  <!--Active services-->
+
+  <mat-expansion-panel style="position:relative; right:10px;">
+    <mat-expansion-panel-header>
+      <mat-panel-title style="align-items:safe center"><mat-icon>info</mat-icon>Active services</mat-panel-title>
+    </mat-expansion-panel-header>
+    <mat-nav-list>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>People counting
+      </a>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>Person detection
+      </a>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>Animal detection
+      </a>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>Gun detection
+      </a>
+      <a mat-list-item (click)="Alert()">
+        <mat-icon>
+          info
+        </mat-icon>Licence Plate Detection
+      </a>
+
+
+
+    </mat-nav-list>
+  </mat-expansion-panel>
+
+
+  <div [ngClass]='appropriateClass'>
+
+    <a mat-list-item (click)="Logout()">
+      <mat-icon>
+        info
+      </mat-icon>Logout
+    </a>
+
+
+  </div>
+</mat-nav-list>
+
+<a mat-list-item (click)="Alert()">
+ 
+</a>
+

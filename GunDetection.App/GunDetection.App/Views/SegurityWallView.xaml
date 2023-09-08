@@ -1,0 +1,141 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GunDetection.App.Views.SegurityWallView">
+    <ContentPage.Content>
+        <ScrollView>
+            <StackLayout Margin="10">
+
+                <CollectionView   x:Name="lss">
+                    <CollectionView.ItemTemplate VerticalOptions="Center" >
+                        <DataTemplate >
+
+                            <StackLayout Margin="10,0,10,20">
+                            <Frame Margin="10,20,10,0" HasShadow="True" BorderColor="Black"  >
+                                <StackLayout>
+                                    <Grid Margin="0" Padding="0" HeightRequest="30">
+                                        <Grid.RowDefinitions >
+                                            <RowDefinition Height="20" />
+                                            <RowDefinition Height="15"/>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width=".333*"/>
+                                            <ColumnDefinition Width=".333*"/>
+                                            <ColumnDefinition Width=".333*"/>
+
+                                        </Grid.ColumnDefinitions>
+
+                                        <Image Source="Gun.png" Scale=".5"  Grid.Column="0"></Image>
+                                        <Label Text="Gun Detection " HorizontalTextAlignment="Center" TranslationY="-10" TextColor="Black" Grid.Row="1"></Label>
+
+                                        <Image Source="Camera.png" Scale=".5" Grid.Column="1"></Image>
+                                        <Label Text="Camera 1 " HorizontalTextAlignment="Center" TranslationY="-10" TextColor="Black" Grid.Row="1" Grid.Column="1"></Label>
+
+                                        <Image Source="Localizacion.png" Scale=".5" Grid.Column="2"></Image>
+                                        <Label Text="Home " HorizontalTextAlignment="Center" TranslationY="-10" TextColor="Black" Grid.Row="1" Grid.Column="2"></Label>
+
+
+                                    </Grid>
+                                    <StackLayout>
+                                            <!--<mm:VideoView  x:Name="video"  Source="{Binding sou }" VerticalOptions="Start" HeightRequest="200" ShowControls="True"   AutoPlay="True" VideoAspect="AspectFit" />-->
+
+                                            <MediaElement   AutoPlay="True"   KeepScreenOn="true" Source="{Binding sou }" HeightRequest="200"    ShowsPlaybackControls="False"  Volume="0" ></MediaElement>
+                                            <!--<vlc:MediaPlayerElement x:Name="video"  HeightRequest="200"></vlc:MediaPlayerElement>-->
+                                            <!--<video:VideoPlayer AutoPlay="True" IsBuffering="True"   Source="{Binding sou}" HeightRequest="200" ></video:VideoPlayer>-->
+                                            <!--<WebView  Source="{Binding sou,Mode=TwoWay}"  HeightRequest="200" />-->
+                                            <StackLayout.GestureRecognizers>
+                                                <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                            </StackLayout.GestureRecognizers>
+                                        </StackLayout>
+                                    
+                                        <StackLayout Margin="0">
+                                            <Button Text="Live Streaming" TextColor="White" Background="Black"  Clicked="TapGestureRecognizer_Tapped" ></Button>
+
+                                            <!--<Grid>
+                                                <Grid.RowDefinitions>
+                                                    <RowDefinition/>
+                                                </Grid.RowDefinitions>
+                                                <Grid.ColumnDefinitions>
+                                                    <ColumnDefinition/>
+                                                    <ColumnDefinition/>
+                                                </Grid.ColumnDefinitions>
+                                                <Button Text="Live Streaming" IsVisible="{Binding visible}" TextColor="White" Background="Black"  Clicked="TapGestureRecognizer_Tapped" ></Button>
+
+                                                <Button Text="Action Required" FontSize="13" IsVisible="{Binding visible}" TextColor="White" Background="#F41725" Grid.Column="1" Clicked="Button_Clicked" ></Button>
+                                                
+                                            </Grid>-->
+                                            
+                                    </StackLayout>
+                                </StackLayout>
+
+
+                            </Frame>
+                            </StackLayout>
+
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
+                <!--<CollectionView x:Name="lsss" TranslationY="-100" >
+                    <CollectionView.ItemTemplate VerticalOptions="Center" >
+                        <DataTemplate >
+
+
+                            <StackLayout  Margin="10,0,10,20">
+
+                            <Frame Margin="10,20,10,0" HasShadow="True" BorderColor="#F41725"  >
+                    <StackLayout>
+                        <Grid Margin="0" Padding="0" HeightRequest="30">
+                            <Grid.RowDefinitions >
+                                <RowDefinition Height="20" />
+                                <RowDefinition Height="15"/>
+                            </Grid.RowDefinitions>
+                            <Grid.ColumnDefinitions>
+                                <ColumnDefinition Width=".333*"/>
+                                <ColumnDefinition Width=".333*"/>
+                                <ColumnDefinition Width=".333*"/>
+
+                            </Grid.ColumnDefinitions>
+
+                            <Image Source="Gun.png" Scale=".5"  Grid.Column="0"></Image>
+                            <Label Text="Gun Detection " HorizontalTextAlignment="Center" TranslationY="-10" TextColor="Black" Grid.Row="1"></Label>
+
+                            <Image Source="Camera.png" Scale=".5" Grid.Column="1"></Image>
+                            <Label Text="Camera 1 " HorizontalTextAlignment="Center" TranslationY="-10" TextColor="Black" Grid.Row="1" Grid.Column="1"></Label>
+
+                            <Image Source="Localizacion.png" Scale=".5" Grid.Column="2"></Image>
+                            <Label Text="Home " HorizontalTextAlignment="Center" TranslationY="-10" TextColor="Black" Grid.Row="1" Grid.Column="2"></Label>
+
+
+                        </Grid>
+                        <StackLayout  >
+                            --><!--<mm:VideoView x:Name="v2" VerticalOptions="Start" HeightRequest="200" ShowControls="True"   AutoPlay="True" VideoAspect="AspectFit"
+                               />--><!--
+                            <MediaElement  HeightRequest="200"  VerticalOptions="Start"  ShowsPlaybackControls="False"
+                                        Source="{Binding sou}" ></MediaElement>
+                        </StackLayout>
+
+                        <StackLayout Margin="0">
+                            <Button Text="Action Required" IsVisible="True" TextColor="White" Background="#F41725" Clicked="Button_Clicked" >
+
+                            </Button>
+                        </StackLayout>
+                    </StackLayout>
+
+
+                </Frame>
+                            </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>-->
+
+                <!--<StackLayout  >
+                <mm:VideoView WidthRequest="352" HeightRequest="360" ShowControls="True"   AutoPlay="True" VideoAspect="AspectFit"
+                              Source="https://archive.org/download/BigBuckBunny_328/BigBuckBunny_512kb.mp4" />
+            </StackLayout>-->
+            </StackLayout>
+        </ScrollView>
+        
+    </ContentPage.Content>
+</ContentPage>

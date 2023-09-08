@@ -1,0 +1,54 @@
+<br />
+<h2 style="margin:10px;"> <img src="../../../assets/Img/cam.svg" /><strong>&nbsp;Cameras</strong></h2>
+<br />
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div align="right">
+        <button class="btn btnCreate" (click)="CreateCameras()">Create Camera</button>
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div class="table-responsive ">
+    <table class="table  table-striped">
+      <thead>
+        <tr class="table-striped ">
+
+          <th scope="col">Camera Name</th>
+          <th scope="col">Camera Location</th>
+          <th scope="col">Camera Sub Location</th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let li of listCamaeras" class="table-striped ">
+
+
+          <td>{{li.name}}</td>
+          <td>{{li.location}}</td>
+          <td>{{li.subLocation}}</td>
+
+
+          <td align="right">
+            <div class="btn-group" role="group">
+
+
+              <button (click)="Delete(li)" class="btn " style="background:#F41725; color:#FFFFFF">Delete</button>
+              <button (click)="Update(li)" class="btn " style="background:#000000 ; color:#FFFFFF ">Update</button>
+            
+            </div>
+
+
+          </td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+
+  </div>
+</div>
+

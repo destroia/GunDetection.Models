@@ -1,0 +1,25 @@
+<br />
+<h2 style="margin:10px;"> <img src="../../../assets/Img/Localizacion.svg" /><strong>&nbsp;{{data.tit}}</strong></h2>
+
+<form [formGroup]="formularioCreateLocation" style="margin:50px;">
+  <div class="row">
+
+    <div class="col-12 col-sm-6 ">
+      <div class="form-group">
+        <label>{{data.name}}</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="{{data.place}}">
+        <p *ngIf="formularioCreateLocation.controls['name'].invalid && formularioCreateLocation.controls['name'].dirty" class="text-danger"> The {{data.place}}  field is mandatory</p>
+      </div>
+    </div>
+
+    <div *ngIf="activateSave" class="col-12  col-sm-4" align="center">
+      <button class="btn btn-primary btn-large btn-block" style="width:70%; position:relative; top:25px" [disabled]="formularioCreateLocation.invalid " (click)="Save()">Save</button>
+    </div>
+    <div class="col-12 col-sm-6" *ngIf="!activateSave" align="center">
+      <div style="position:absolute;">
+        <div class="loader"></div>
+      </div>
+
+    </div>
+  </div>
+</form>

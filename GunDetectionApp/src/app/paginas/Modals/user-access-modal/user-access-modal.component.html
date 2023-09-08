@@ -1,0 +1,134 @@
+<br />
+<h2 style="margin:10px;">  <mat-icon>account_circle</mat-icon><strong>&nbsp;{{data.tit}}</strong></h2>
+<br />
+
+<form [formGroup]="formularioUser" style="margin:50px;">
+  <div class="row">
+
+    <div class="col-12 col-sm-4 ">
+      <div class="form-group">
+        <label>Name</label>
+        <input type="text" class="form-control" formControlName="name" placeholder="Enter Name">
+        <p *ngIf="formularioUser.controls['name'].invalid && formularioUser.controls['name'].dirty" class="text-danger"> The Name field is mandatory</p>
+      </div>
+    </div>
+
+
+    <div class="col-12 col-sm-4 ">
+      <div class="form-group">
+        <label>Last Name</label>
+        <input type="text" class="form-control" formControlName="lastName" placeholder="Enter Last Name">
+        <p *ngIf="formularioUser.controls['lastName'].invalid && formularioUser.controls['lastName'].dirty" class="text-danger"> The Last Name field is mandatory</p>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4 ">
+      <div class="form-group">
+        <label>E-Mail</label>
+        <input type="email" class="form-control" formControlName="email" placeholder="Enter E-Mail">
+        <p *ngIf="formularioUser.controls['email'].invalid && formularioUser.controls['email'].dirty" class="text-danger"> The E-Mail field is mandatory</p>
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-4 ">
+      <div class="form-group">
+        <label>Phone</label>
+        <input type="text" min="10" class="form-control" formControlName="phone" placeholder="Enter Phone">
+        <p *ngIf="formularioUser.controls['phone'].invalid && formularioUser.controls['phone'].dirty" class="text-danger">
+          The Phone field is mandatory <br />
+          Minimum ten characters
+        </p>
+      </div>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+   
+
+
+
+
+
+
+
+    <div class="col-12 col-sm-6" *ngIf="!activateSave" align="center">
+      <div style="position:absolute;">
+        <div class="loader"></div>
+      </div>
+
+    </div>
+  </div>
+
+  <div *ngIf="checkBoxAlert" class="row">
+    <div class="col-12 col-sm-3 ">
+      <div>
+
+        <input type="checkbox" id="checkGun" formControlName="checkGun">
+
+        <label for="checkGun" style="position:relative; left:10px;"> Gum Detection</label>
+
+      </div>
+    </div>
+
+
+    <div class="col-12 col-sm-3 ">
+      <div>
+
+        <input type="checkbox" id="checkPerson" formControlName="checkPerson">
+
+        <label for="checkPerson" style="position:relative; left:10px;"> Person Detection</label>
+
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-3 ">
+      <div>
+
+        <input type="checkbox" id="checkPerson" formControlName="checkHand">
+
+        <label for="checkPerson" style="position:relative; left:10px;"> Hands Up</label>
+
+      </div>
+    </div>
+
+    <div class="col-12 col-sm-3 ">
+      <div>
+
+        <input type="checkbox" id="checkPerson" formControlName="checkFight">
+
+        <label for="checkPerson" style="position:relative; left:10px;">Fight</label>
+
+      </div>
+    </div>
+  </div>
+  
+    <a *ngIf="activateSave" class="col-12  col-sm-4" (click)="Save()">
+      <button class="btn btn-primary btn-large btn-block"  [disabled]="formularioUser.invalid " (click)="Save()">Save</button>
+    </a>
+  
+  
+</form>
+
+<!--<footer>
+
+  <div *ngIf="activateSave" align="right" style="margin-right:10% ;position:relative; bottom: 80px;">
+    <div class="btn-group" aria-label="Basic example">
+
+      <button class="btn btnBack " style="background:#000000; color: #ffffff;" (click)="OnClick()"> Back</button>
+
+    </div>
+  </div>
+
+</footer>-->

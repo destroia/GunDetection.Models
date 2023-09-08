@@ -1,0 +1,80 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:Res="clr-namespace:GunDetection.App.ViewModels"
+             x:Class="GunDetection.App.Views.AlertsView" Title="Alerts" NavigationPage.HasNavigationBar="False">
+    
+    <ContentPage.Content>
+       
+        
+        
+      
+            <StackLayout>
+            <StackLayout>
+                <ActivityIndicator x:Name="acty"  HeightRequest="10"  TranslationY="200" Color="Black" IsRunning="True" Scale="5"></ActivityIndicator>
+
+            </StackLayout>
+            <CollectionView x:Name="listAlerts"  >
+                    <CollectionView.ItemTemplate VerticalOptions="Center" >
+                        <DataTemplate >
+                            
+                            <StackLayout Margin="0,0,0,25"  >
+
+
+                                        <Grid Margin="30,0,30,0" HeightRequest="18"  Padding="0">
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition></RowDefinition>
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="30" />
+                                            <ColumnDefinition  />
+                                        </Grid.ColumnDefinitions>
+                                        <Image Source="Gun.png" Aspect="AspectFit" ></Image>
+                                        <Label   FontSize="Subtitle" TextColor="Black" Grid.Column="1">Gun Detection</Label>
+                                        
+                                    </Grid> 
+                                  
+                                    <Grid Margin="0,0,0,0" TranslationY="-5" Padding="0" HeightRequest="10" >
+                                        <Grid.RowDefinitions>
+                                            <RowDefinition Height="20" ></RowDefinition>
+
+                                        </Grid.RowDefinitions>
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="150" />
+                                            <ColumnDefinition  />
+                                        </Grid.ColumnDefinitions>
+
+                                        <Label Margin="30,0"  TextColor="Black" HorizontalTextAlignment="End" >Camera bed</Label>
+                                <Label Margin="30,0"  TextColor="Black" HorizontalTextAlignment="End" Grid.Column="1" Text="{Binding Date}" ></Label>
+                                    </Grid>
+                               
+                                <StackLayout HeightRequest="200" WidthRequest="160"  >
+                                    <Frame Margin="20,5,20,10"  CornerRadius="20" HeightRequest="200" WidthRequest="160"
+                                    Padding="0" >
+
+                                        <Image Source="{Binding Full_photo}"  Margin="0"  WidthRequest="160" Aspect="Fill" HeightRequest="200"></Image>
+
+                                    </Frame>
+
+                                </StackLayout>
+
+                                <StackLayout.GestureRecognizers>
+                                    <TapGestureRecognizer NumberOfTapsRequired="1" Tapped="TapGestureRecognizer_Tapped"></TapGestureRecognizer>
+                                </StackLayout.GestureRecognizers>
+
+                            </StackLayout >
+                        </DataTemplate >
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+
+
+
+           
+
+           
+
+
+        </StackLayout>
+     
+        
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="GunDetection.App.Views.CameraView" Title="Cameras">
+    
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Add" Clicked="ToolbarItem_ClickedAddCamera"/>
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <CollectionView x:Name="listCameras">
+            <CollectionView.ItemTemplate VerticalOptions="Center">
+                <DataTemplate >
+                    <StackLayout >
+                        <Frame HeightRequest="60" HasShadow="True" Margin="20,10,20,0">
+
+
+                            <Grid>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="50"/>
+                                </Grid.RowDefinitions>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="0.6*"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                    <ColumnDefinition Width="0.2*"/>
+                                </Grid.ColumnDefinitions>
+                                <StackLayout >
+                                    <Label Text="{Binding Name}" TextColor="Black" FontSize="Large"  VerticalOptions="Center" Margin="20,0" FontAttributes="Bold" ></Label>
+
+                            
+
+                                </StackLayout>
+
+                                <Frame  Grid.Column="1" ></Frame>
+                                <Button BackgroundColor="White" Clicked="Button_ClickedDelete"   Scale="0.8"  ImageSource="outline_delete_outline_black_18.png"  Grid.Column="1"></Button>
+                                <Frame Grid.Column="2" ></Frame>
+                                <Button BackgroundColor="White" Clicked="Button_ClickedUpdate"  ImageSource="outline_update_black_18.png" Scale="0.8" Grid.Column="2"></Button>
+
+                            </Grid>
+
+                        </Frame>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </ContentPage.Content>
+</ContentPage>

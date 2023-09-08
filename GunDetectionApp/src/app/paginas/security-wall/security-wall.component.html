@@ -1,0 +1,260 @@
+<br />
+<h2 style="margin:10px;"> <mat-icon style="position:relative; top:5px;">warning</mat-icon><strong>&nbsp;Security Wall</strong></h2>
+
+<div class="" style="margin-left:10%; margin-right:10%; ">
+  <div class="row" style="margin:20px; position:relative; top:-55px;">
+
+
+    <!--Boxes-->
+    <div class="col-12 col-xl-5">
+      <span> <img src="../../../assets/Img/cam.svg" style="position:absolute; top:10px; left:25px; " /></span>
+
+      <!--[(ngModel)]="categoria.orden"-->
+      <select class="form-control custom-select" style="width:80%; left:50px; position:relative">
+        <option selected>All Cameras</option>
+        <option class='option'
+                *ngFor='let option of listCam'
+                [value]="option.id">
+          {{option.name}}
+        </option>
+      </select>
+    </div>
+
+    <!--Locacion-->
+    <div class="col-12 col-xl-5">
+      <span> <img src="../../../assets/Img/Localizacion.svg" style="position:absolute; top:8px; left:25px; " /></span>
+
+      <!--[(ngModel)]="categoria.orden"-->
+      <select class="form-control custom-select" style="width:80%; left:50px; position:relative">
+        <option selected>All Location</option>
+        <option class='option'
+                *ngFor='let option of listLoca'
+                [value]="option.id">
+          {{option.name}}
+        </option>
+      </select>
+    </div>
+
+
+
+
+
+  </div>
+  </div>
+
+
+<!--<div class="row">-->
+  <!--Cameras video-->
+  <!--<div class="{{col}}" style="margin-left:15px;  margin-right:15px; ">
+
+    <div class="row">
+
+      <div class="{{colCam}}">
+        <div class="card cardCam" style="border-color:#F41725">
+
+
+          <div class="card-body" style="padding:0px; margin-top:10px;">
+            <div *ngIf="false" class="row">
+              <div class="col-6">
+                <span class="AlarmItems" style="margin-left:10%"> <img src="../../../assets/Img/cam.svg" />&nbsp;Camera 2</span>
+              </div>
+
+              <div class="col-6">
+                <span class="AlarmItems" style="margin-right:10%"> <img src="../../../assets/Img/Localizacion.svg" />&nbsp;Backyard</span>
+              </div>
+            </div>
+
+            <div class="row">
+              <div class="col-6">
+                <span class="AlarmItems " style="margin-left:10%;  color: #F41725" > <img src="../../../assets/Img/camDanger.svg" />&nbsp;Camera 2</span>
+              </div>
+
+              <div class="col-6 " align="right">
+                <span class="AlarmItems " style="margin-right:10%;  color: #F41725"> <img src="../../../assets/Img/locationDanger.svg" />&nbsp;Backyard</span>
+              </div>
+            </div>
+
+
+          </div>
+
+
+          <div class="row lign-items-end" style="margin-left: 90%; position:absolute;  ">
+            <div class="col-12"></div>
+            <div class="align-self-end">
+              <div class="card" style="width:77px; height:24px; right:50PX;  background: #FFFFFF; border-radius: 8px; z-index:1; top:60px; ">
+                <span>&nbsp;<img src="../../../assets/Img/alertDanger.svg" sizes="" /></span>
+                <h3 class="text-center " style="position:relative;  top:-15px; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 14px; line-height: 16px; color: #F41725">&nbsp;&nbsp;&nbsp; ALERT</h3>
+              </div>
+            </div>
+
+          </div>
+
+
+          <div class="card-body" style="text-align:center; padding-left:0px; padding-right:0px;">
+
+            <a style="cursor:pointer ">
+              <video width="95%" src="../../../assets/MUSICA para TRABAJAR y Concentrarse en la Oficina o en Casa 1!!! (3).mp4" controls> Video no es soportado... </video>-->
+
+              <!--<iframe  style="width:95%" src="https://www.youtube.com/embed/xwUUvc9eUhc" frameborder="0"
+              allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
+              allowfullscreen>
+
+      </iframe>-->
+            <!--</a>
+            <br />
+            <br />
+            <button class="btnActionRe  " style="" (click)="ActionRequired()"><img src="../../../assets/Img/tap 2.svg" style="position:relative; top:-4px;" />&nbsp;Action required</button>
+          </div>
+        </div>
+      </div>
+
+     
+
+
+
+
+
+
+
+    </div>
+  </div>
+  <div *ngIf="bar" class="col-1"></div>
+  <div *ngIf="bar"  class="{{colBar}}" >
+    <div style="position:relative; bottom:141Px">
+      
+      <div class=" " style="width:150%; height:41px; background:#F41725">
+
+        <span align="justify">
+          <button (click)="Closed()" style="background:transparent; border-color:transparent; width:54px;  height:54px; position:relative; top:-5px; margin-left:20px; "><img src="../../../assets/Img/Closed.svg" /></button>
+        </span>
+        <span align="center">
+         
+          <h3  class="ActionRe" style=" position:relative; bottom:43px;"><img src="../../../assets/Img/tap 2.svg" />&nbsp;Action Required</h3>-->
+          <!--<button (click)="View()" style="background:transparent; border-color:transparent; "><img  src="../../../assets/Img/ExpandirView.png"/></button>-->
+        <!--</span>
+      </div>
+      <div style="width:150%;  min-height: 86vh;
+  overflow: scroll; background: #E5E5E5;">
+
+
+        <div class="" style="margin-left:10%; margin-right:10%;">
+          <div class="row" style="margin:20px;">-->
+
+
+            <!--Boxes-->
+            <!--<div class="col-12 col-lg-6">
+              <span> <img src="../../../assets/Img/cam.svg" style="position:absolute; top:10px; left:-11px; " /></span>-->
+
+              <!--[(ngModel)]="categoria.orden"-->
+              <!--<select class="form-control custom-select">
+                <option selected>All Cameras</option>
+                <option class='option'
+                        *ngFor='let option of listCam'
+                        [value]="option.id">
+                  {{option.name}}
+                </option>
+              </select>
+            </div>-->
+
+            <!--Locacion-->
+            <!--<div class="col-12 col-lg-6">
+              <span> <img src="../../../assets/Img/Localizacion.svg" style="position:absolute; top:8px; left:-8px; " /></span>-->
+
+              <!--[(ngModel)]="categoria.orden"-->
+              <!--<select class="form-control custom-select">
+                <option selected>All Location</option>
+                <option class='option'
+                        *ngFor='let option of listLoca'
+                        [value]="option.id">
+                  {{option.name}}
+                </option>
+              </select>
+            </div>
+
+
+
+
+
+          </div>
+        </div>
+
+        <br />
+        <h3 style="margin-left:10%">Events: 2</h3>
+
+        <div>-->
+
+          <!--Alerts-->
+
+          <!--<div class="card " style="margin-left:10%; margin-right:10%; background:rgba(244, 23, 37, 0.24); margin-top:-5px;">
+
+            <a class="btn" (click)="AlertDetails()" style="cursor:pointer ">
+              <div class="card-body" style="margin:0px; padding:0px;">
+                <div class="row">
+                  <div class="col-4" style="margin:0px; padding:0px;">
+                    <span class="AlarmItems">  <img src="../../../assets/Img/fight.svg" />&nbsp;Fight</span>
+                  </div>
+
+                  <div class="col-4" style="margin:0px; padding:0px;">
+                    <span class="AlarmItems"> <img src="../../../assets/Img/cam.svg" />&nbsp;Camera 2</span>
+                  </div>
+
+                  <div class="col-4" style="margin:0px; padding:0px;">
+                    <span class="AlarmItems"> <img src="../../../assets/Img/Localizacion.svg" />&nbsp;Backyard</span>
+                  </div>
+
+                </div>
+
+
+
+
+              </div>
+            </a>
+            <div class="row lign-items-end" style="margin-left: 90%; position:absolute;  ">
+              <div class="col-12"></div>
+              <div class="align-self-end">
+                <div class="card" style="width:72px; height:24px; right:50PX;  background: #FFFFFF; border-radius: 8px; z-index:1; top:50px; ">
+                  <h3 class="text-center" style="position:relative; top:5px; font-family: Roboto; font-style: normal; font-weight: bold; font-size: 14px; line-height: 16px; color: #F41725">JUST NOW</h3>
+                </div>
+              </div>
+
+            </div>-->
+            <!--<div class="row" style="width:95%">
+      <div class="col-6"></div>
+
+      <div class="col-6 ">
+        <div class="align-self-end">
+          <div>
+
+            <div class="card" style="width:150px; height:40px;   z-index:1; top:10px; "></div>
+          </div>
+        </div>
+
+      </div>
+    </div>-->
+
+            <!--<div class="card-body" style="text-align:center; padding-left:0px; padding-right:0px;">
+              <a (click)="AlertDetails()" style="cursor:pointer ">
+                <img class="card-img-t alertImg " src="https://s1.1zoom.me/big3/471/Painting_Art_Back_view_Photographer_575380_3840x2400.jpg" alt="Card image cap">-->
+                <!--<div class="card" style="width:200px; height:40px; position:absolute; top:30%; margin-left:50%;text-align:end"></div>-->
+
+              <!--</a>
+
+              <div class="btn-group" aria-label="Basic example" style="width:95%">
+
+                <button type="button" class="btn  AlertTipoBtn" style="background: #000000 ; color: #FFFFFF" (click)="Confirmar()">Confirm</button>
+                <button type="button" class="btn  AlertTipoBtn" style="background: #FFFFFF; color: #000000" (click)="False()">False</button>
+
+              </div>
+
+
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+   
+  </div>
+</div>-->

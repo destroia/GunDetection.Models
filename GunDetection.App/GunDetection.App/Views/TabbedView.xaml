@@ -1,0 +1,15 @@
+﻿q<?xml version="1.0" encoding="utf-8" ?>
+<TabbedPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" xmlns:TabbedBottom="clr-namespace:GunDetection.App.Views"
+            x:Class="GunDetection.App.Views.TabbedView"
+            xmlns:android="clr-namespace:Xamarin.Forms.PlatformConfiguration.AndroidSpecific;assembly=Xamarin.Forms.Core"
+            android:TabbedPage.ToolbarPlacement="Bottom" Title="Gun Detection"
+            BarTextColor="White" 
+            Shell.NavBarIsVisible="True" 
+            BarBackground="black">
+
+    <TabbedBottom:AlertsView   IconImageSource="warning12.png" Title="Alerts"></TabbedBottom:AlertsView>
+    <TabbedBottom:SegurityWallView IconImageSource="Live.png" Title="Segurity Wall"></TabbedBottom:SegurityWallView>
+    <TabbedBottom:ActivateServicesView IconImageSource="chip.png"  Title="Activate Services" ></TabbedBottom:ActivateServicesView>
+
+</TabbedPage>

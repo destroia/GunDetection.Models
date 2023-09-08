@@ -1,0 +1,58 @@
+<br />
+<h2 style="margin:10px;"> <img src="../../../assets/Img/Localizacion.svg" /><strong>&nbsp;Sub Locations</strong></h2>
+<br />
+<div class="container">
+  <div class="row">
+
+    <div class="col-6">
+      <div align="left">
+        <button class="btn btn-link" (click)="Back()">Back</button>
+      </div>
+    </div>
+
+    <div class="col-6">
+      <div align="right">
+        <button class="btn btnCreate" (click)="CreateSubLocation()">Create Sub Location</button>
+       
+      </div>
+    </div>
+  </div>
+
+  <br />
+  <div class="table-responsive ">
+    <table class="table  table-striped">
+      <thead>
+        <tr class="table-striped ">
+
+          <th scope="col">Name Sublocation </th>
+
+
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let li of listSubLoca" class="table-striped ">
+
+
+          <td>{{li.name}}</td>
+
+
+          <td align="right">
+            <div class="btn-group" role="group">
+
+
+              <button (click)="Delete(li)" class="btn " style="background:#F41725; color:#FFFFFF">Delete</button>
+              <button (click)="Update(li)" class="btn " style="background:#000000 ; color:#FFFFFF ">Update</button>
+
+            </div>
+
+
+          </td>
+          <td>
+          </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+ 
+</div>
+
